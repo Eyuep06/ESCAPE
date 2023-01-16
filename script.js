@@ -32,9 +32,14 @@ var ESCAPE;
     }
     function szeneZweiB() {
         buttonClickedControl++;
+        countdownBereich.remove();
         clearButtons();
         let trackSzeneZweiB = new Audio("Tracks/Szene2B.mp4");
         trackSzeneZweiB.play();
+        setTimeout(function () {
+            alert("Die Flucht endet hier für dich. Du wurdest von der Grenzkontrolle gefangen genommen. Neustart?");
+            location.reload();
+        }, 22000);
     }
     function szeneDreiA() {
         buttonClickedControl++;
@@ -50,6 +55,10 @@ var ESCAPE;
         clearButtons();
         let trackSzeneDreiB = new Audio("Tracks/Szene3B.mp4");
         trackSzeneDreiB.play();
+        setTimeout(function () {
+            alert("Du wurdest von einem labilen Mann erschossen. Neustart?");
+            location.reload();
+        }, 24000);
     }
     function szeneVierA() {
         buttonClickedControl++;
@@ -65,6 +74,10 @@ var ESCAPE;
         clearButtons();
         let trackSzeneVierB = new Audio("Tracks/Szene4B.mp4");
         trackSzeneVierB.play();
+        setTimeout(function () {
+            alert("Die Flucht endet hier für dich. Neustart?");
+            location.reload();
+        }, 25000);
     }
     function createButtons1() {
         let opt1 = document.createElement("button");
@@ -114,7 +127,8 @@ var ESCAPE;
             countdownBereich.innerHTML = "" + secondsLeft;
         }
         if (secondsLeft == 0) {
-            alert("Game Over");
+            // alert("Die Flucht endet hier für dich. Du wurdest von der Grenzkontrolle festgenommen. Neustart?");
+            location.reload();
         }
     }
     function countdown2() {
@@ -123,7 +137,8 @@ var ESCAPE;
             countdownBereich2.innerHTML = "" + secondsLeft2;
         }
         if (secondsLeft2 == 0) {
-            alert("Game Over");
+            alert("Im Kampf gegen den Steuermann bist du vom Boot runtergefallen. Neustart?");
+            location.reload();
         }
     }
     function countdown3() {
@@ -132,7 +147,8 @@ var ESCAPE;
             countdownBereich3.innerHTML = "" + secondsLeft3;
         }
         if (secondsLeft3 == 0) {
-            alert("Game Over");
+            alert("Ein anderer Mann ist vom Boot gesprungen und hat dich mit in den Tod gezogen. Neustart?");
+            location.reload();
         }
     }
 })(ESCAPE || (ESCAPE = {}));

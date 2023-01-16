@@ -37,9 +37,13 @@ namespace ESCAPE {
 
     function szeneZweiB(): void {
         buttonClickedControl++;
+        countdownBereich.remove();
         clearButtons();
         let trackSzeneZweiB: HTMLAudioElement = new Audio("Tracks/Szene2B.mp4");
         trackSzeneZweiB.play();
+        setTimeout(function (): void {
+            alert("Die Flucht endet hier für dich. Du wurdest von der Grenzkontrolle gefangen genommen. Neustart?"); location.reload();
+        }, 22000);
     }
 
     function szeneDreiA(): void {
@@ -57,6 +61,9 @@ namespace ESCAPE {
         clearButtons();
         let trackSzeneDreiB: HTMLAudioElement = new Audio("Tracks/Szene3B.mp4");
         trackSzeneDreiB.play();
+        setTimeout(function (): void {
+            alert("Du wurdest von einem labilen Mann erschossen. Neustart?"); location.reload();
+        }, 24000);
     }
 
     function szeneVierA(): void {
@@ -74,8 +81,11 @@ namespace ESCAPE {
         clearButtons();
         let trackSzeneVierB: HTMLAudioElement = new Audio("Tracks/Szene4B.mp4");
         trackSzeneVierB.play();
+        setTimeout(function (): void {
+            alert("Die Flucht endet hier für dich. Neustart?"); location.reload();
+        }, 25000);
     }
-    
+
 
     function createButtons1(): void {
         let opt1: HTMLElement = document.createElement("button");
@@ -141,7 +151,8 @@ namespace ESCAPE {
         }
 
         if (secondsLeft == 0) {
-            alert("Game Over");
+            // alert("Die Flucht endet hier für dich. Du wurdest von der Grenzkontrolle festgenommen. Neustart?");
+            location.reload();
 
         }
     }
@@ -153,7 +164,8 @@ namespace ESCAPE {
         }
 
         if (secondsLeft2 == 0) {
-            alert("Game Over");
+            alert("Im Kampf gegen den Steuermann bist du vom Boot runtergefallen. Neustart?");
+            location.reload();
 
         }
     }
@@ -165,7 +177,8 @@ namespace ESCAPE {
         }
 
         if (secondsLeft3 == 0) {
-            alert("Game Over");
+            alert("Ein anderer Mann ist vom Boot gesprungen und hat dich mit in den Tod gezogen. Neustart?");
+            location.reload();
 
         }
     }
