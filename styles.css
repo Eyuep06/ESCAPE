@@ -31,7 +31,7 @@ h1 {
   }
 
 #auswahl {
-    height: 200px;
+    height: 150px;
     width: 600px;
     color: white;
     margin: 0 auto;
@@ -57,3 +57,21 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bolder;
 } 
+
+p {
+    text-align: center;
+    font-size: 50px;
+    margin: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+#ctBereich {
+    height: 150px;
+    width: 600px;
+    color: white;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    display: block;
+}
