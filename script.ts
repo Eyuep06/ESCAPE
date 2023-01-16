@@ -151,7 +151,7 @@ namespace ESCAPE {
         }
 
         if (secondsLeft == 0) {
-            // alert("Die Flucht endet hier für dich. Du wurdest von der Grenzkontrolle festgenommen. Neustart?");
+            alert("Die Flucht endet hier für dich. Du wurdest von der Grenzkontrolle festgenommen. Neustart?");
             location.reload();
 
         }
