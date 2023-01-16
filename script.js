@@ -2,7 +2,7 @@
 var ESCAPE;
 (function (ESCAPE) {
     let startButton = document.getElementById("startButton");
-    let buttonClickedControl = 0;
+    let buttonClickedControl = 0; //Um den Countdown zu stoppen damit kein Alert kommt
     let auswahlBereich = document.getElementById("auswahl");
     startButton.addEventListener("click", clickStartButton);
     function clickStartButton() {
@@ -12,14 +12,20 @@ var ESCAPE;
         setTimeout(szeneEins, 2000);
     }
     function szeneEins() {
-        let trackSzeneEins = new Audio("trailer-sport-stylish-16073.mp3");
+        let trackSzeneEins = new Audio("Tracks/Szene1.mp4");
         trackSzeneEins.play();
-        setTimeout(createButtons1, 10000);
+        setTimeout(createButtons1, 38000);
     }
     function szeneZweiA() {
         buttonClickedControl++;
         clearButtons();
-        let trackSzeneZweiA = new Audio("583765__wearefreesfx__cinematic-trailer-whoosh-transition.wav");
+        let trackSzeneZweiA = new Audio("Tracks/Szene2A.mp4");
+        trackSzeneZweiA.play();
+    }
+    function szeneZweiB() {
+        buttonClickedControl++;
+        clearButtons();
+        let trackSzeneZweiA = new Audio("Tracks/Szene2B.mp4");
         trackSzeneZweiA.play();
     }
     function createButtons1() {
@@ -32,6 +38,7 @@ var ESCAPE;
         auswahlBereich.appendChild(opt1);
         auswahlBereich.appendChild(opt2);
         opt1.addEventListener("click", szeneZweiA);
+        opt2.addEventListener("click", szeneZweiB);
     }
     function clearButtons() {
         auswahlBereich.innerHTML = "";

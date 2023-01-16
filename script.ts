@@ -1,6 +1,6 @@
 namespace ESCAPE {
     let startButton: HTMLElement = document.getElementById("startButton") as HTMLElement;
-    let buttonClickedControl: number = 0;
+    let buttonClickedControl: number = 0; //Um den Countdown zu stoppen damit kein Alert kommt
     let auswahlBereich: HTMLElement = document.getElementById("auswahl") as HTMLElement;
 
     startButton.addEventListener("click", clickStartButton);
@@ -15,16 +15,23 @@ namespace ESCAPE {
 
  
     function szeneEins(): void {
-        let trackSzeneEins: HTMLAudioElement = new Audio("trailer-sport-stylish-16073.mp3");
+        let trackSzeneEins: HTMLAudioElement = new Audio("Tracks/Szene1.mp4");
         trackSzeneEins.play();
-        setTimeout(createButtons1, 10000);
+        setTimeout(createButtons1, 38000);
         
     }
 
     function szeneZweiA(): void {
         buttonClickedControl ++;
         clearButtons();
-        let trackSzeneZweiA: HTMLAudioElement = new Audio("583765__wearefreesfx__cinematic-trailer-whoosh-transition.wav");
+        let trackSzeneZweiA: HTMLAudioElement = new Audio("Tracks/Szene2A.mp4");
+        trackSzeneZweiA.play();
+    }
+
+    function szeneZweiB(): void {
+        buttonClickedControl ++;
+        clearButtons();
+        let trackSzeneZweiA: HTMLAudioElement = new Audio("Tracks/Szene2B.mp4");
         trackSzeneZweiA.play();
     }
 
@@ -39,6 +46,7 @@ namespace ESCAPE {
         auswahlBereich.appendChild(opt2);
 
         opt1.addEventListener("click", szeneZweiA);
+        opt2.addEventListener("click", szeneZweiB);
 
     }
 
