@@ -15,11 +15,9 @@ namespace ESCAPE {
 
     function clickStartButton(): void {
 
-        let feedbackOnClick: HTMLAudioElement = new Audio("583765__wearefreesfx__cinematic-trailer-whoosh-transition.wav");
-        feedbackOnClick.play();
         startButton.remove();
         startDiv.remove();
-        setTimeout(szeneEins, 2000);
+        szeneEins();
     }
 
 
