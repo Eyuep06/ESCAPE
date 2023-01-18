@@ -14,11 +14,9 @@ var ESCAPE;
     let textArea = document.getElementById("text");
     startButton.addEventListener("click", clickStartButton);
     function clickStartButton() {
-        let feedbackOnClick = new Audio("583765__wearefreesfx__cinematic-trailer-whoosh-transition.wav");
-        feedbackOnClick.play();
         startButton.remove();
         startDiv.remove();
-        setTimeout(szeneEins, 2000);
+        szeneEins();
     }
     function szeneEins() {
         let trackSzeneEins = new Audio("Tracks/Szene1.mp4");
