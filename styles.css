@@ -9,6 +9,13 @@ h1 {
     text-align: center;
 }
 
+#text {
+    font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 #startButton {
     background-color: #ffffff;
     border: none;
@@ -82,4 +89,81 @@ p {
     display: block;
     text-align: center;
     display: block;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 60px;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+    }
+
+    #text {
+        font-size: 20px;
+        text-align: center;
+        font-weight: lighter;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #startButton {
+        background-color: white;
+        border: none;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+        font-size: 30px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        margin: auto;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bolder;
+    }
+
+    #containerStart{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+    }
+
+    #auswahl {
+        height: 150px;
+        width: 300px;
+        color: white;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        display: block;
+    
+    }
+
+    #ctBereich {
+        height: 150px;
+        width: 300px;
+        color: white;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        display: block;
+    }
+
+    #opt1, #opt2 {
+        background-color: #ffffff;
+        border: none;
+        color: black;
+        padding: 15px 32px;
+        margin: auto;
+        margin-bottom: 10px;    
+        text-decoration: none;
+        font-size: 15px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        /* margin: 0 auto; */
+        display: block;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: normal;
+        width: 70%;
+    } 
+    
+
 }
