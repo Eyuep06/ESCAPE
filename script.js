@@ -71,6 +71,7 @@ var ESCAPE;
     function szeneVierB() {
         buttonClickedControl++;
         countdownBereich3.remove();
+        trackSzeneDreiA.pause();
         clearButtons();
         let trackSzeneVierB = new Audio("Tracks/Entscheidung 3/Ent3fal.wav");
         trackSzeneVierB.play();
