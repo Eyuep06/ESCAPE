@@ -10,6 +10,10 @@ namespace ESCAPE {
     let secondsLeft2: number = 10;
     let secondsLeft3: number = 10;
     let textArea: HTMLElement = document.getElementById("text") as HTMLElement;
+    let trackSzeneEins: HTMLAudioElement = new Audio("Tracks/Anfang/Sz1.wav");
+    let trackSzeneZweiA: HTMLAudioElement = new Audio("Tracks/Entscheidung 1/Ent1ri.wav");
+    let trackSzeneDreiA: HTMLAudioElement = new Audio("Tracks/Entscheidung 2/Ent2ri.wav");
+
 
     startButton.addEventListener("click", clickStartButton);
 
@@ -22,55 +26,58 @@ namespace ESCAPE {
 
 
     function szeneEins(): void {
-        let trackSzeneEins: HTMLAudioElement = new Audio("Tracks/Szene1.mp4");
         trackSzeneEins.play();
-        setTimeout(createButtons1, 38000);
+        setTimeout(createButtons1, 206000);
+        
     }
 
     function szeneZweiA(): void {
         buttonClickedControl++;
         countdownBereich.remove();
+        trackSzeneEins.pause();
         clearButtons();
-        let trackSzeneZweiA: HTMLAudioElement = new Audio("Tracks/Szene2A.ogg");
         trackSzeneZweiA.play();
-        setTimeout(createButtons2, 35000);
+        setTimeout(createButtons2, 139000);
     }
 
     function szeneZweiB(): void {
         buttonClickedControl++;
         countdownBereich.remove();
+        trackSzeneEins.pause();
         clearButtons();
-        let trackSzeneZweiB: HTMLAudioElement = new Audio("Tracks/Szene2B.mp4");
+        let trackSzeneZweiB: HTMLAudioElement = new Audio("Tracks/Entscheidung 1/Ent1fal.wav");
         trackSzeneZweiB.play();
-        setTimeout(function () { textAusgabe(1); }, 22000);
+        setTimeout(function () { textAusgabe(1); }, 28000);
     }
 
     function szeneDreiA(): void {
         buttonClickedControl++;
         countdownBereich2.remove();
+        trackSzeneZweiA.pause();
         clearButtons();
-        let trackSzeneDreiA: HTMLAudioElement = new Audio("Tracks/Szene3A.ogg");
         trackSzeneDreiA.play();
-        setTimeout(createButtons3, 38000);
+        setTimeout(createButtons3, 79000);
     }
 
     function szeneDreiB(): void {
         buttonClickedControl++;
         countdownBereich2.remove();
+        trackSzeneZweiA.pause();
         clearButtons();
-        let trackSzeneDreiB: HTMLAudioElement = new Audio("Tracks/Szene3B.mp4");
+        let trackSzeneDreiB: HTMLAudioElement = new Audio("Tracks/Entscheidung 2/Ent2fal.wav");
         trackSzeneDreiB.play();
-        setTimeout(function () { textAusgabe(2); }, 24000);
+        setTimeout(function () { textAusgabe(2); }, 52000);
 
     }
 
     function szeneVierA(): void {
         buttonClickedControl++;
         countdownBereich3.remove();
+        trackSzeneDreiA.pause();
         clearButtons();
-        let trackSzeneVierA: HTMLAudioElement = new Audio("Tracks/Szene4A.ogg");
+        let trackSzeneVierA: HTMLAudioElement = new Audio("Tracks/Entscheidung 3/Ent3ri.wav");
         trackSzeneVierA.play();
-        setTimeout(function () { textAusgabe(3); }, 42000);
+        setTimeout(function () { textAusgabe(3); }, 174000);
 
     }
 
@@ -78,9 +85,9 @@ namespace ESCAPE {
         buttonClickedControl++;
         countdownBereich3.remove();
         clearButtons();
-        let trackSzeneVierB: HTMLAudioElement = new Audio("Tracks/Szene4B.mp4");
+        let trackSzeneVierB: HTMLAudioElement = new Audio("Tracks/Entscheidung 3/Ent3fal.wav");
         trackSzeneVierB.play();
-        setTimeout(function () { textAusgabe(4); }, 25000);
+        setTimeout(function () { textAusgabe(4); }, 18000);
 
     }
 
@@ -121,10 +128,10 @@ namespace ESCAPE {
 
     function createButtons3(): void {
         let opt1: HTMLElement = document.createElement("button");
-        opt1.innerHTML = "Nicht springen";
+        opt1.innerHTML = "Jacke geben";
         opt1.id = "opt1";
         let opt2: HTMLElement = document.createElement("button");
-        opt2.innerHTML = "Springen";
+        opt2.innerHTML = "Jacke nicht geben";
         opt2.id = "opt2";
         auswahlBereich.appendChild(opt1);
         auswahlBereich.appendChild(opt2);

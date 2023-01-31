@@ -12,6 +12,9 @@ var ESCAPE;
     let secondsLeft2 = 10;
     let secondsLeft3 = 10;
     let textArea = document.getElementById("text");
+    let trackSzeneEins = new Audio("Tracks/Anfang/Sz1.wav");
+    let trackSzeneZweiA = new Audio("Tracks/Entscheidung 1/Ent1ri.wav");
+    let trackSzeneDreiA = new Audio("Tracks/Entscheidung 2/Ent2ri.wav");
     startButton.addEventListener("click", clickStartButton);
     function clickStartButton() {
         startButton.remove();
@@ -19,57 +22,59 @@ var ESCAPE;
         szeneEins();
     }
     function szeneEins() {
-        let trackSzeneEins = new Audio("Tracks/Szene1.mp4");
         trackSzeneEins.play();
-        setTimeout(createButtons1, 38000);
+        setTimeout(createButtons1, 206000);
     }
     function szeneZweiA() {
         buttonClickedControl++;
         countdownBereich.remove();
+        trackSzeneEins.pause();
         clearButtons();
-        let trackSzeneZweiA = new Audio("Tracks/Szene2A.ogg");
         trackSzeneZweiA.play();
-        setTimeout(createButtons2, 35000);
+        setTimeout(createButtons2, 139000);
     }
     function szeneZweiB() {
         buttonClickedControl++;
         countdownBereich.remove();
+        trackSzeneEins.pause();
         clearButtons();
-        let trackSzeneZweiB = new Audio("Tracks/Szene2B.mp4");
+        let trackSzeneZweiB = new Audio("Tracks/Entscheidung 1/Ent1fal.wav");
         trackSzeneZweiB.play();
-        setTimeout(function () { textAusgabe(1); }, 22000);
+        setTimeout(function () { textAusgabe(1); }, 28000);
     }
     function szeneDreiA() {
         buttonClickedControl++;
         countdownBereich2.remove();
+        trackSzeneZweiA.pause();
         clearButtons();
-        let trackSzeneDreiA = new Audio("Tracks/Szene3A.ogg");
         trackSzeneDreiA.play();
-        setTimeout(createButtons3, 38000);
+        setTimeout(createButtons3, 79000);
     }
     function szeneDreiB() {
         buttonClickedControl++;
         countdownBereich2.remove();
+        trackSzeneZweiA.pause();
         clearButtons();
-        let trackSzeneDreiB = new Audio("Tracks/Szene3B.mp4");
+        let trackSzeneDreiB = new Audio("Tracks/Entscheidung 2/Ent2fal.wav");
         trackSzeneDreiB.play();
-        setTimeout(function () { textAusgabe(2); }, 24000);
+        setTimeout(function () { textAusgabe(2); }, 52000);
     }
     function szeneVierA() {
         buttonClickedControl++;
         countdownBereich3.remove();
+        trackSzeneDreiA.pause();
         clearButtons();
-        let trackSzeneVierA = new Audio("Tracks/Szene4A.ogg");
+        let trackSzeneVierA = new Audio("Tracks/Entscheidung 3/Ent3ri.wav");
         trackSzeneVierA.play();
-        setTimeout(function () { textAusgabe(3); }, 42000);
+        setTimeout(function () { textAusgabe(3); }, 174000);
     }
     function szeneVierB() {
         buttonClickedControl++;
         countdownBereich3.remove();
         clearButtons();
-        let trackSzeneVierB = new Audio("Tracks/Szene4B.mp4");
+        let trackSzeneVierB = new Audio("Tracks/Entscheidung 3/Ent3fal.wav");
         trackSzeneVierB.play();
-        setTimeout(function () { textAusgabe(4); }, 25000);
+        setTimeout(function () { textAusgabe(4); }, 18000);
     }
     function createButtons1() {
         let opt1 = document.createElement("button");
@@ -99,10 +104,10 @@ var ESCAPE;
     }
     function createButtons3() {
         let opt1 = document.createElement("button");
-        opt1.innerHTML = "Nicht springen";
+        opt1.innerHTML = "Jacke geben";
         opt1.id = "opt1";
         let opt2 = document.createElement("button");
-        opt2.innerHTML = "Springen";
+        opt2.innerHTML = "Jacke nicht geben";
         opt2.id = "opt2";
         auswahlBereich.appendChild(opt1);
         auswahlBereich.appendChild(opt2);
