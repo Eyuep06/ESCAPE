@@ -11,7 +11,7 @@ var ESCAPE;
     let secondsLeft = 10;
     let secondsLeft2 = 10;
     let secondsLeft3 = 10;
-    let textArea = document.getElementById("text");
+    let textArea = document.getElementById("textbereich");
     let trackSzeneEins = new Audio("Tracks/Anfang/Szene1.wav");
     let trackSzeneZweiA = new Audio("Tracks/Entscheidung 1/Entscheidung1_Richtig.wav");
     let trackSzeneDreiA = new Audio("Tracks/Entscheidung 2/Entscheidung2_Richtig.wav");
@@ -62,6 +62,7 @@ var ESCAPE;
     function szeneVierA() {
         buttonClickedControl++;
         countdownBereich3.remove();
+        auswahlBereich.remove();
         trackSzeneDreiA.pause();
         clearButtons();
         let trackSzeneVierA = new Audio("Tracks/Entscheidung 3/Entscheidung3_Richtig.wav");
@@ -71,6 +72,7 @@ var ESCAPE;
     function szeneVierB() {
         buttonClickedControl++;
         countdownBereich3.remove();
+        auswahlBereich.remove();
         trackSzeneDreiA.pause();
         clearButtons();
         let trackSzeneVierB = new Audio("Tracks/Entscheidung 3/Entscheidung3_Falsch.wav");

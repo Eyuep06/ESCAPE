@@ -9,7 +9,7 @@ namespace ESCAPE {
     let secondsLeft: number = 10;
     let secondsLeft2: number = 10;
     let secondsLeft3: number = 10;
-    let textArea: HTMLElement = document.getElementById("text") as HTMLElement;
+    let textArea: HTMLElement = document.getElementById("textbereich") as HTMLElement;
     let trackSzeneEins: HTMLAudioElement = new Audio("Tracks/Anfang/Szene1.wav");
     let trackSzeneZweiA: HTMLAudioElement = new Audio("Tracks/Entscheidung 1/Entscheidung1_Richtig.wav");
     let trackSzeneDreiA: HTMLAudioElement = new Audio("Tracks/Entscheidung 2/Entscheidung2_Richtig.wav");
@@ -73,6 +73,7 @@ namespace ESCAPE {
     function szeneVierA(): void {
         buttonClickedControl++;
         countdownBereich3.remove();
+        auswahlBereich.remove();
         trackSzeneDreiA.pause();
         clearButtons();
         let trackSzeneVierA: HTMLAudioElement = new Audio("Tracks/Entscheidung 3/Entscheidung3_Richtig.wav");
@@ -84,6 +85,7 @@ namespace ESCAPE {
     function szeneVierB(): void {
         buttonClickedControl++;
         countdownBereich3.remove();
+        auswahlBereich.remove();
         trackSzeneDreiA.pause();
         clearButtons();
         let trackSzeneVierB: HTMLAudioElement = new Audio("Tracks/Entscheidung 3/Entscheidung3_Falsch.wav");
