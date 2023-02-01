@@ -10,9 +10,9 @@ namespace ESCAPE {
     let secondsLeft2: number = 10;
     let secondsLeft3: number = 10;
     let textArea: HTMLElement = document.getElementById("text") as HTMLElement;
-    let trackSzeneEins: HTMLAudioElement = new Audio("Tracks/Anfang/Sz1.wav");
-    let trackSzeneZweiA: HTMLAudioElement = new Audio("Tracks/Entscheidung 1/Ent1ri.wav");
-    let trackSzeneDreiA: HTMLAudioElement = new Audio("Tracks/Entscheidung 2/Ent2ri.wav");
+    let trackSzeneEins: HTMLAudioElement = new Audio("Tracks/Anfang/Szene1.wav");
+    let trackSzeneZweiA: HTMLAudioElement = new Audio("Tracks/Entscheidung 1/Entscheidung1_Richtig.wav");
+    let trackSzeneDreiA: HTMLAudioElement = new Audio("Tracks/Entscheidung 2/Entscheidung2_Richtig.wav");
 
 
     startButton.addEventListener("click", clickStartButton);
@@ -37,7 +37,7 @@ namespace ESCAPE {
         trackSzeneEins.pause();
         clearButtons();
         trackSzeneZweiA.play();
-        setTimeout(createButtons2, 139000);
+        setTimeout(createButtons2, 138000);
     }
 
     function szeneZweiB(): void {
@@ -45,9 +45,9 @@ namespace ESCAPE {
         countdownBereich.remove();
         trackSzeneEins.pause();
         clearButtons();
-        let trackSzeneZweiB: HTMLAudioElement = new Audio("Tracks/Entscheidung 1/Ent1fal.wav");
+        let trackSzeneZweiB: HTMLAudioElement = new Audio("Tracks/Entscheidung 1/Entscheidung1_falsch.wav");
         trackSzeneZweiB.play();
-        setTimeout(function () { textAusgabe(1); }, 28000);
+        setTimeout(function () { textAusgabe(1); }, 29000);
     }
 
     function szeneDreiA(): void {
@@ -56,7 +56,7 @@ namespace ESCAPE {
         trackSzeneZweiA.pause();
         clearButtons();
         trackSzeneDreiA.play();
-        setTimeout(createButtons3, 79000);
+        setTimeout(createButtons3, 80000);
     }
 
     function szeneDreiB(): void {
@@ -64,9 +64,9 @@ namespace ESCAPE {
         countdownBereich2.remove();
         trackSzeneZweiA.pause();
         clearButtons();
-        let trackSzeneDreiB: HTMLAudioElement = new Audio("Tracks/Entscheidung 2/Ent2fal.wav");
+        let trackSzeneDreiB: HTMLAudioElement = new Audio("Tracks/Entscheidung 2/Entscheidung2_Falsch.wav");
         trackSzeneDreiB.play();
-        setTimeout(function () { textAusgabe(2); }, 52000);
+        setTimeout(function () { textAusgabe(2); }, 53000);
 
     }
 
@@ -75,9 +75,9 @@ namespace ESCAPE {
         countdownBereich3.remove();
         trackSzeneDreiA.pause();
         clearButtons();
-        let trackSzeneVierA: HTMLAudioElement = new Audio("Tracks/Entscheidung 3/Ent3ri.wav");
+        let trackSzeneVierA: HTMLAudioElement = new Audio("Tracks/Entscheidung 3/Entscheidung3_Richtig.wav");
         trackSzeneVierA.play();
-        setTimeout(function () { textAusgabe(3); }, 174000);
+        setTimeout(function () { textAusgabe(3); }, 192000);
 
     }
 
@@ -86,7 +86,7 @@ namespace ESCAPE {
         countdownBereich3.remove();
         trackSzeneDreiA.pause();
         clearButtons();
-        let trackSzeneVierB: HTMLAudioElement = new Audio("Tracks/Entscheidung 3/Ent3fal.wav");
+        let trackSzeneVierB: HTMLAudioElement = new Audio("Tracks/Entscheidung 3/Entscheidung3_Falsch.wav");
         trackSzeneVierB.play();
         setTimeout(function () { textAusgabe(4); }, 18000);
 
@@ -161,7 +161,7 @@ namespace ESCAPE {
             secondsLeft = 11;
             auswahlBereich.remove();
             let textDom: HTMLElement = document.createElement("p");
-            textDom.innerHTML = "Countdown 1 abgelaufen";
+            textDom.innerHTML = "Auf der Flucht ist es wichtig schnelle Entscheidungen zu treffen. Du wurdest von der Grenzkontrolle eingeholt und festgenommen.";
             textDom.id = "text";
             textArea.appendChild(textDom);
         }
@@ -178,7 +178,7 @@ namespace ESCAPE {
             secondsLeft2 = 11;
             auswahlBereich.remove();
             let textDom: HTMLElement = document.createElement("p");
-            textDom.innerHTML = "Countdown 2 abgelaufen";
+            textDom.innerHTML = "„Das einzig Nötige, damit das Böse Erfolg haben kann, ist, dass die Guten einfach zusehen.“ <br> - Edmund Burke";
             textDom.id = "text";
             textArea.appendChild(textDom);
 
@@ -196,7 +196,7 @@ namespace ESCAPE {
             secondsLeft3 = 11;
             auswahlBereich.remove();
             let textDom: HTMLElement = document.createElement("p");
-            textDom.innerHTML = "Countdown 3 abgelaufen";
+            textDom.innerHTML = "„Die Menschheit muss dem Krieg ein Ende setzen, oder der Krieg setzt der Menschheit ein Ende.“ <br> - John F. Kennedy";
             textDom.id = "text";
             textArea.appendChild(textDom);
 
@@ -208,28 +208,28 @@ namespace ESCAPE {
             case 1:
                 auswahlBereich.remove();
                 let textDom: HTMLElement = document.createElement("p");
-                textDom.innerHTML = "Text Falsche Endscheidung 1";
+                textDom.innerHTML = "Der Flüchtige hat einen Weg, der Verfolger hundert. <br> - Deutsches Sprichwort";
                 textDom.id = "text";
                 textArea.appendChild(textDom);
                 break;
             case 2:
                 auswahlBereich.remove();
                 let textDom2: HTMLElement = document.createElement("p");
-                textDom2.innerHTML = "Text Falsche Endscheidung 2";
+                textDom2.innerHTML = "Flüchtling sein heißt: die Heimat verlassen müssen ohne eigene Schuld, ohne Sicherheit - nur mit einem Herzen voll Hoffnung. <br> - Heinz Körber";
                 textDom2.id = "text";
                 textArea.appendChild(textDom2);
                 break;
             case 3:
                 auswahlBereich.remove();
                 let textDom3: HTMLElement = document.createElement("p");
-                textDom3.innerHTML = "Text erfolgreiches Ende";
+                textDom3.innerHTML = "„Die Menschheit muss dem Krieg ein Ende setzen, oder der Krieg setzt der Menschheit ein Ende.“ <br> - John F. Kennedy";
                 textDom3.id = "text";
                 textArea.appendChild(textDom3);
                 break;
             case 4:
                 auswahlBereich.remove();
                 let textDom4: HTMLElement = document.createElement("p");
-                textDom4.innerHTML = "Text Falsche Endscheidung 3";
+                textDom4.innerHTML = "„Die Menschheit muss dem Krieg ein Ende setzen, oder der Krieg setzt der Menschheit ein Ende.“ <br> - John F. Kennedy";
                 textDom4.id = "text";
                 textArea.appendChild(textDom4);
                 break;
